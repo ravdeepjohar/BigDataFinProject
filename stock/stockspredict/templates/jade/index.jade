@@ -1,0 +1,21 @@
+extends !templates/basic.jade
+
+block main
+	.signing-box(id='js-signing-box')
+		span.fancy-input
+			input(type='email', name='email')
+			label(for='email', data-innerHTML='Email') Email
+			label(for='email', class='error') Email Not Registered
+		
+		span.fancy-input
+			input(type='password', name='password')
+			label(for='password', data-innerHTML='Password') Password
+			label(for='password', class='error') Bad Password
+
+		span.fancy-input.hide(id='js-confirm-password')
+			input(type='password', name='confirm-password')
+			label(for='confirm-password', data-innerHTML='Confirm Password') Confirm Password
+			label(for='confirm-password', class='error') Passwords Don't Match
+		
+		input(type='submit', value='Sign In', class='btn green')
+		input(type='submit', value='Sign Up', id='js-sign-up', class='btn green')
