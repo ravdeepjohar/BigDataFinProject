@@ -1,0 +1,20 @@
+.btn {
+	@extend %border-box;
+	// position:relative;
+	position:absolute;
+	background-color:transparent;
+	border:0;
+	border-bottom:2px solid $green;
+	border-radius:.5rem;
+	outline:none;
+	&.green {
+		background-color:$pale-green;
+		&:hover {
+			background-color:$pale-green;
+		}
+		&.focus {
+			margin-top:2px;
+			border-bottom:0;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+header {
+	position:relative;
+	background-color:#222;
+	padding:.5rem 0;
+	> h1 {
+		margin-left:1.25rem;
+	}
+	> dl {
+		@extend %cf;
+		margin:.5rem 0;
+		padding-left:1.25rem;
+		border-left:1px solid #444;
+		position:absolute;
+		top:0;
+		right:1.25rem;
+		> dt {
+			padding:.5rem 0;
+			> .icon {
+				fill:white;
+				height:1.5rem;
+				width:1.5rem;
+				vertical-align:middle;
+				cursor:pointer;
+			}
+			&:hover ~ dd {
+				display:block;
+				z-index:auto;
+				&:nth-of-type(1) { top:3.03rem; }
+				&:nth-of-type(2) { top:4.53rem; }
+				&:nth-of-type(3) { top:6.03rem; }
+				&:nth-of-type(4) { top:7.53rem; }
+				&:nth-of-type(5) { top:9.03rem; }
+			}
+		}
+		> dd {
+			@include transition(z-index, top);
+			position:absolute;
+			top:0;
+			background-color:#222;
+			color:white;
+			width:5rem;
+			right:-1.25rem;
+			padding:.125rem .5rem;
+			text-align:right;
+			z-index:-1;
+		}
+	}
+}
