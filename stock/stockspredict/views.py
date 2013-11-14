@@ -4,6 +4,9 @@ from datetime import datetime
 def home(request):
     return render(request, 'index.html')
 
+def profile(request):
+    return render(request,'profile.html')
+
 def simple(request):    
     import random     
     import django    
