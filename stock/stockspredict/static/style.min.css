@@ -593,3 +593,8 @@ header > dl > dd {
 .stocksTable-price {
   width: 20%;
 }
+
+.summaryImg {
+  width:100%;
+  margin-top:1.25rem;
+}
