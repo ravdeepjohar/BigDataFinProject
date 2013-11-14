@@ -1,0 +1,18 @@
+.profile {
+	@extend .content;
+	margin:2.25rem;
+	> section {
+		&:first-child {
+			padding-bottom:1.25rem;
+			> label, > select { margin-top:.25rem;}
+			> select {
+				margin-right:1.25rem;
+			}
+			> input {
+				padding:.25rem .5rem;
+			}
+		}
+		&:last-child { padding-top:1.25rem; }
+		> table { width:100%; }
+	}
+}

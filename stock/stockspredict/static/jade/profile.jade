@@ -1,0 +1,30 @@
+extends !templates/basic.jade
+
+block main
+	.profile
+		section
+			label(for='addExchange') Pick a Stock Exchange:
+			select(name='addExchange')
+				option(value='NYSE') NYSE
+			label(for='addStock') Add a Stock:
+			select(name='addStock')
+				option(value='StockA') Stock A
+				option(value='StockB') Stock B
+				option(value='StockC') Stock C
+				option(value='StockD') Stock D
+				option(value='StockE') Stock E
+				option(value='StockF') Stock F
+				option(value='StockG') Stock G
+				option(value='StockH') Stock H
+			input(type='submit', value='Add', class='btn green')
+		section
+			table.stocksTable
+				thead: include !includes/stock-table-head.jade
+				tfoot: include !includes/stock-table-head.jade
+				tbody
+					tr
+						td.stocksTable-remove: label: include !includes/close-img.jade
+							input(type='radio', name='remove', id='js-remove', class='hide')
+						td.stocksTable-symbol ASDF
+						td.stocksTable-name: a(href='stock.html') Horkus Co Inc LLC
+						td.stocksTable-price 11.87
