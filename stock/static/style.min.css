@@ -364,7 +364,7 @@ h1 {
   font-style: italic;
 }
 
-.content, .signing-box, .profile {
+.content, .signing-box, .profile, .stock-details {
   background-color: #ffffee;
   padding: 1.25rem;
   border-radius: 1rem;
@@ -592,4 +592,29 @@ header > dl > dd {
 
 .stocksTable-price {
   width: 20%;
+}
+
+#summaryImg {
+  width:50%;
+  margin-top:1.25rem;
+  position:relative;
+  left:50%;
+  margin-left:-25%;
+}
+
+.stock-details {
+}
+
+.stock-details img {
+  width:24%;
+}
+
+.stock-details img:nth-of-type(0),
+.stock-details img:nth-of-type(1) {
+  margin-bottom:1.25rem;
+}
+
+.stock-details img:nth-of-type(0),
+.stock-details img:nth-of-type(2) {
+  margin-right:1%;
 }

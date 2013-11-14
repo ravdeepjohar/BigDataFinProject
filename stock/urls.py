@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^$', 'stock.stockspredict.views.home', name='home'),
     url(r'^profile', 'stock.stockspredict.views.profile', name='profile'),
-   (r'^charts/simple.png$', 'stock.stockspredict.views.simple'),
+    url(r'^stock', 'stock.stockspredict.views.stock', name='stock'),
+    (r'^charts/simple.png$', 'stock.stockspredict.views.simple'),
     url(r'^admin/', include(admin.site.urls)),
 )

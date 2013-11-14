@@ -6,7 +6,8 @@ def home(request):
 
 def profile(request):
     return render(request,'profile.html')
-
+def stock(request):
+    return render(request,'stock.html')
 def simple(request):    
     import random     
     import django    
