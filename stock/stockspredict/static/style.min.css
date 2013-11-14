@@ -596,7 +596,10 @@ header > dl > dd {
 
 #summaryImg {
   width:50%;
-  margin:1.25rem auto 0 auto;
+  margin-top:1.25rem;
+  position:relative;
+  left:50%;
+  margin-left:-25%;
 }
 
 .stock-details {
