@@ -364,7 +364,7 @@ h1 {
   font-style: italic;
 }
 
-.content, .signing-box, .profile {
+.content, .signing-box, .profile, .stock-details {
   background-color: #ffffee;
   padding: 1.25rem;
   border-radius: 1rem;
@@ -603,7 +603,6 @@ header > dl > dd {
 }
 
 .stock-details {
-
 }
 
 .stock-details img {
