@@ -27,19 +27,31 @@
       </dl>
     </header>
     <main>
-      <div id="js-signing-box" class="signing-box"><span class="fancy-input">
+      {{ state }}
+      <form action="/login/" method="post" id="js-signing-box" class="signing-box">
+        {% csrf_token %}
+        <span class="fancy-input">
           <input type="email" name="email">
           <label for="email" data-innerHTML="Email">Email</label>
-          <label for="email" class="error">Email Not Registered</label></span><span class="fancy-input">
+          <!-- {% if bademail %}
+          <label for="email" class="error">Email Not Registered</label>
+          {% endif %} -->
+        </span>
+        <span class="fancy-input">
           <input type="password" name="password">
           <label for="password" data-innerHTML="Password">Password</label>
-          <label for="password" class="error">Bad Password</label></span><span id="js-confirm-password" class="fancy-input hide">
+          {% if badpassword %}
+          <label for="password" class="error">Bad Password</label>
+          {% endif %}
+        </span>
+        <span id="js-confirm-password" class="fancy-input hide">
           <input type="password" name="confirm-password">
           <label for="confirm-password" data-innerHTML="Confirm Password">Confirm Password</label>
-          <label for="confirm-password" class="error">Passwords Don't Match</label></span>
+          <label for="confirm-password" class="error">Passwords Don't Match</label>
+        </span>
         <input type="submit" value="Sign In" class="btn green">
         <input type="submit" value="Sign Up" id="js-sign-up" class="btn green">
-      </div>
+      </form>
     </main>
     <footer>
     </footer>
