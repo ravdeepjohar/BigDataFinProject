@@ -13,7 +13,8 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^$', 'stock.stockspredict.views.home', name='home'),
+    # url(r'^$', 'stock.stockspredict.views.home', name='home'),
+    (r'^login/$', 'stock.stockspredict.views.login_user'),
     url(r'^profile', 'stock.stockspredict.views.profile', name='profile'),
     url(r'^stock', 'stock.stockspredict.views.stock', name='stock'),
     (r'^charts/simple.png$', 'stock.stockspredict.views.simple'),

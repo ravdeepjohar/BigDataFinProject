@@ -33,9 +33,7 @@
 			cursor:pointer;
 			&:hover {
 				> .x, > circle { @include transition(fill); }
-				> .x {
-					fill:white;
-				}
+				> .x { fill:white; }
 				> circle { fill:$charcoal; }
 			}
 		}

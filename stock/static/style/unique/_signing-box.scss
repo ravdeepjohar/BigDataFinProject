@@ -1,9 +1,11 @@
 .signing-box {
-	@extend %abs-center;
 	@extend .content;
 	@include transition(height);
 	height:9.55rem;
 	width:250px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
 	> .fancy-input { width:100%; }
 	> .btn {
 		display:block;
@@ -12,7 +14,5 @@
 		padding:.5rem 0;
 		& + .btn { right:1.25rem; }
 	}
-	&.signup {
-		height:13.25rem;
-	}
+	&.signup { height:13.25rem; }
 }

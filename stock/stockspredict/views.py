@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.template import RequestContext
+from django.core.context_processors import csrf
 from django.shortcuts import render_to_response
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from datetime import datetime
 
 # def home(request):
@@ -36,11 +38,15 @@ def simple(request):
     return response
 
 
-def home(request):
+def login_user(request):
     state = "Please log in below..."
     username = password = ''
+    c = {}
+    c.update(csrf(request))
+   # request = c
+
     if request.POST:
-        username = request.POST.get('email')
+        username = request.POST.get('username')
         password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
@@ -53,4 +59,4 @@ def home(request):
         else:
             state = "Your username and/or password were incorrect."
 
-    return render_to_response('index.html',{'state':state, 'username': username})
+    return render_to_response('auth.html',{'state':state, 'username': username},context_instance=RequestContext(request))
