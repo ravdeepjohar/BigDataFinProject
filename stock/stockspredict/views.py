@@ -52,8 +52,9 @@ def login_user(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
-                login(request, user)
-                state = "You're successfully logged in!"
+                #login(request, user)
+                stock(request)
+                #state = "You're successfully logged in!"
             else:
                 state = "Your account is not active, please contact the site admin."
         else:
